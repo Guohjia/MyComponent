@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exposure</title>
+    <style>
+        .load li {
+            float: left;
+            list-style: none;
+            margin: 0 62px;
+        }
+        
+        .load::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <ul class="load">
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+            <li><img src="http://img.zcool.cn/community/01443f564897a432f87512f6eed753.gif" height="500px" width="500px" data-src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"
+                    alt=""></li>
+        </ul>
+    </div>
+</body>
+<script src="../jquery-3.2.0.min.js"></script>
+<script src="exposure.js"></script>
+<script>
+    load = (function () {
+        return {
+            init: function ($content) {
+                new Exposure($content)
+            }
+        }
+    })()
+
+    load.init($('.load img'))
+
+
+    // load1=new Exposure($('.load img'))
+
+</script>
+
+</html>

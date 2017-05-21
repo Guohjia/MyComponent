@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Calendar</title>
+    <style>
+        .date-picker {
+            border: 1px solid #ccc;
+            width: 240px;
+            font-size: 14px;
+        }
+
+        .date-picker>.header {
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #CA2B2B;
+            color: #fff;
+        }
+
+        .header .caret-left {
+            display: block;
+            float: left;
+            border-right: 7px solid #fff;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            margin-left: 10px;
+            margin-top: 6px;
+            cursor: pointer;
+        }
+
+        .header .caret-right {
+            display: block;
+            float: right;
+            border-left: 7px solid #fff;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            margin-right: 10px;
+            margin-top: 6px;
+            cursor: pointer;
+        }
+
+        .date-picker .panel {
+            width: 100%;
+            text-align: center;
+        }
+
+        .date-picker .panel th {
+            line-height: 2;
+        }
+
+        .date-picker .panel td {
+            line-height: 1.2;
+        }
+
+        .date-picker .pre-month,
+        .date-picker .next-month {
+            color: #eee;
+        }
+
+        .date-picker .cur-month {
+            cursor: pointer;
+        }
+
+        .date-picker .cur-month:hover {
+            background: #ccc;
+            color: #fff;
+        }
+         .date-picker .cur-date {
+      color: #CA2B2B;
+    }
+    </style>
+</head>
+
+<body>
+    <input class="date-ipt" type="text" placeholder="有初始值" date-init="2017/07/08" />
+    <input class="date-ipt" type="text" placeholder="无初始值" />
+    <!--<div class="date-picker">
+        <div class="header">
+            <span class="pre caret-left"></span><span class="cur header-date"></span><span class="next caret-right"></span>
+        </div>
+        <table class="panel">
+            <thead>
+                <tr>
+                    <th>日</th>
+                    <th>一</th>
+                    <th>二</th>
+                    <th>三</th>
+                    <th>四</th>
+                    <th>五</th>
+                    <th>六</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+          <td class="pre-month">28</td>
+          <td class="pre-month">29</td>
+          <td class="pre-month">30</td>
+          <td class="pre-month">31</td>
+          <td class="cur-month cur-date">01</td>
+          <td class="cur-month">02</td>
+          <td class="cur-month">03</td>
+        </tr>
+        <tr>
+          <td class="cur-month">04</td>
+          <td class="cur-month">05</td>
+          <td class="cur-month">06</td>
+          <td class="cur-month">07</td>
+          <td class="cur-month">08</td>
+          <td class="cur-month">09</td>
+          <td class="cur-month">10</td>
+        </tr>
+        <tr>
+          <td class="cur-month">11</td>
+          <td class="cur-month">12</td>
+          <td class="cur-month">13</td>
+          <td class="cur-month">14</td>
+          <td class="cur-month">15</td>
+          <td class="cur-month">16</td>
+          <td class="cur-month">17</td>
+        </tr>
+        <tr>
+          <td class="cur-month">18</td>
+          <td class="cur-month">19</td>
+          <td class="cur-month">20</td>
+          <td class="cur-month">21</td>
+          <td class="cur-month">22</td>
+          <td class="cur-month">23</td>
+          <td class="cur-month">24</td>
+        </tr>
+        <tr>
+          <td class="cur-month">25</td>
+          <td class="cur-month">26</td>
+          <td class="cur-month">27</td>
+          <td class="cur-month">28</td>
+          <td class="cur-month">29</td>
+          <td class="cur-month">30</td>
+          <td class="next-month">01</td>
+        </tr>
+            </tbody>
+        </table>
+    </div>-->
+</body>
+<script src="../jquery-3.2.0.min.js"></script>
+<script src="calendar.js"></script>
+<script>
+    $('.date-ipt').each(function () {
+        new Calendar($(this))
+    })
+
+
+    //jquery插件
+    // $.fn.datePicker=function(){
+    //     this.each(function(){
+    //         new Calendar($(this));
+    //     })
+    // };
+
+    // $('.date-ipt').datePicker();
+</script>
+
+</html>

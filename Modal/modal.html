@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>modal</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .dialog {
+            width: 350px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: orangered;
+            display: none;
+            border-radius: 4px;
+            z-index: 2;
+        }
+        
+        .coverage {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+            background: #ccc;
+            z-index:1;
+            display: none;
+        }
+        
+        .header {
+            padding: 10px 8px;
+            background: blue;
+            position: relative;
+        }
+        
+        .content {
+            padding: 30px 25px;
+        }
+        
+        .footer {
+            padding: 16px 8px;
+            text-align: center;
+        }
+        
+        .footer a {
+            text-decoration: none;
+            padding: 10px 8px;
+            background: greenyellow;
+            border-radius: 3px;
+            margin: 0 2px;
+        }
+        
+        .header .btn-close {
+            position: absolute;
+            cursor: pointer;
+            right: 28px;
+            top: 50%;
+        }
+        
+        .header .btn-close::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 4px;
+            background: #FFF;
+            border-radius: 2px;
+            position: absolute;
+            /*top: 50%;*/
+            transform: translateY(-50%) rotateZ(45deg);
+        }
+        
+        .header .btn-close::after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 4px;
+            background: #FFF;
+            border-radius: 2px;
+            position: absolute;
+            transform: translateY(-50%) rotateZ(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button">
+        <button class="open1">打开1</button>
+        <button class="open2">打开2</button>
+        <button class="open3">打开3</button>
+        <button class="open4">打开4</button>
+        <button class="open5">打开5</button>
+    </div>
+
+    <!--<div class="dialog">
+        <div class="header">
+            <h3>Welcome</h3><span class="btn-close"></span>
+        </div>
+        <div class="content">
+            <li>选择1</li>
+            <li>选择2</li>
+            <li>选择3</li>
+            <li>选择4</li>
+            <li>选择5</li>
+        </div>
+        <div class="footer">
+            <a href="">取消</a>
+            <a href="">确定</a>
+        </div>-->
+    </div>
+    <script src="../jquery-3.2.0.min.js"></script>
+    <script src="modal.js"></script>
+    <script>
+        new Dialog();
+    </script>
+</body>
+
+</html>

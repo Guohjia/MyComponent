@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tab</title>
+    <style>
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap {
+            margin-bottom: 100px;
+        }
+        .tab,
+        .content {
+            width:341px;
+            margin: 0 auto;
+            
+        }
+        .tab li {
+            padding: 15px 35px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            float: left;
+            cursor: pointer;
+        }
+        .content li {
+            display: none;
+            border: 1px solid #ccc;
+            border-top:none;
+            height:60px;
+            border-radius: 4px;
+        }
+        
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .content .active {
+            display: block;
+        }
+        .tab .chosen {
+            border-bottom:none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul class="tab clearfix">
+            <li class="chosen">选项1</li>
+            <li>选项2</li>
+            <li>选项3</li>
+        </ul>
+        <ul class="content clearfix">
+            <li class="active">内容1</li>
+            <li>内容2</li>
+            <li>内容3</li>
+        </ul>
+    </div>
+       <div class="wrap">
+        <ul class="tab clearfix">
+            <li class="chosen">选项1</li>
+            <li>选项2</li>
+            <li>选项3</li>
+        </ul>
+        <ul class="content clearfix">
+            <li class="active">内容1</li>
+            <li>内容2</li>
+            <li>内容3</li>
+        </ul>
+    </div>
+    <script src="tab.js"></script>
+    <script>
+        var tab1 = new Tab(document.querySelectorAll('.wrap')[0])
+        var tab2=new Tab(document.querySelectorAll('.wrap')[1])
+    </script>
+</body>
+
+</html>
