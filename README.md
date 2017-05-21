@@ -16,7 +16,7 @@
 [源码](https://github.com/Guohjia/OOP-module/blob/master/Exposure-懒加载/exposure.html)
 [预览](https://guohjia.github.io/OOP-module/Exposure-懒加载/exposure.html)
 
-* 1.Modal(模态对话框)
+* 1.Modal(模式对话框)
 
 [源码](https://github.com/Guohjia/OOP-module/blob/master/Modal/modal.html)
 [预览](https://guohjia.github.io/OOP-module/Modal/modal.html)
