@@ -17,7 +17,7 @@
 
 [5.Tab(列表项组件)](https://guohjia.github.io/OOP-module/Tab/tab.html)
 
-[6.waterFull(瀑布流-新浪新闻)](https://guohjia.github.io/OOP-module/WaterFall/waterFallNews.html)
+[6.waterFull(瀑布流-新浪新闻)](https://guohjia.github.io/OOP-module/waterFall/waterFallNews.html)
 
 [7.Barrel(木桶布局)](https://guohjia.github.io/OOP-module/Barrel/Barrel.html)
 
@@ -43,4 +43,4 @@ gotop.init(300,500)
 ```
 
 ### 部分轮子整合页面示例(导航栏固定+回到顶部+提示+懒加载)
-[预览](https://guohjia.github.io/OOP-module/Music/music.html)
+[预览](https://guohjia.github.io/OOP-module/music/music.html)
