@@ -9,15 +9,13 @@
 
 [2.Carousel(轮播组件)](https://guohjia.github.io/OOP-module/Carousel/carousel.html)
 
-[3.Exposure(懒加载曝光-1)](https://guohjia.github.io/OOP-module/Exposure/exposure.html)
-
-[3.Exposure(懒加载曝光-2新浪新闻)](https://guohjia.github.io/OOP-module/WaterFall/waterFallNews.html)
+[3.Exposure(懒加载曝光)](https://guohjia.github.io/OOP-module/Exposure/exposure.html)
 
 [4.Modal(模式对话框)](https://guohjia.github.io/OOP-module/Modal/modal.html)
 
 [5.Tab(列表项组件)](https://guohjia.github.io/OOP-module/Tab/tab.html)
 
-[6.waterFull(瀑布流-新浪新闻)](https://guohjia.github.io/OOP-module/WaterFall/waterFallNews.html)
+[6.waterFull(瀑布流)](https://guohjia.github.io/OOP-module/waterFall/waterFall.html)
 
 [7.Barrel(木桶布局)](https://guohjia.github.io/OOP-module/Barrel/Barrel.html)
 

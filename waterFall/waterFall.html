@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>waterFall</title>
+    <style>
+        .content {
+            position: relative;
+        }
+        
+        .item {
+            width: 200px;
+            position: absolute;
+            margin-right: 10px;
+            margin-top: 10px;
+            transition: all 1s;
+        }
+        
+        .h1 {
+            height: 500px;
+            background: red;
+        }
+        
+        .h2 {
+            background: blue;
+            height: 400px;
+        }
+        
+        .h3 {
+            background: green;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="item h2">1</div>
+        <div class="item h1">2</div>
+        <div class="item h2">3</div>
+        <div class="item h3">4</div>
+        <div class="item h1">5</div>
+        <div class="item h2">6</div>
+        <div class="item h2">7</div>
+        <div class="item h3">8</div>
+        <div class="item h1">9</div>
+        <div class="item h2">10</div>
+        <div class="item h3">11</div>
+        <div class="item h2">12</div>
+    </div>
+    <script src="../jquery-3.2.0.min.js"></script>
+    <script src="waterFall.js"></script>
+    <script>
+            WaterFall.init($('.content'))
+    </script>
+</body>
+
+</html>
