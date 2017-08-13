@@ -41,4 +41,4 @@ gotop.init(300,500)
 ```
 
 ### 部分轮子整合页面示例(导航栏固定+回到顶部+提示+懒加载)
-[预览](https://guohjia.github.io/OOP-module/Music/music.html)
+[预览](https://guohjia.github.io/OOP-module/music/music.html)
