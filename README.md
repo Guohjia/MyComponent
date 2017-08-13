@@ -9,17 +9,17 @@
 
 [2.Carousel(轮播组件)](https://guohjia.github.io/OOP-module/Carousel/carousel.html)
 
-[3.Exposure(懒加载曝光-1)](https://guohjia.github.io/OOP-module/Exposure-懒加载/exposure.html)
+[3.Exposure(懒加载曝光-1)](https://guohjia.github.io/OOP-module/Exposure/exposure.html)
 
-[3.Exposure(懒加载曝光-2新浪新闻)](https://guohjia.github.io/OOP-module/Exposure-懒加载/exposure.html)
+[3.Exposure(懒加载曝光-2新浪新闻)](https://guohjia.github.io/OOP-module/WaterFall/waterFallNews.html)
 
 [4.Modal(模式对话框)](https://guohjia.github.io/OOP-module/Modal/modal.html)
 
-[5.Tab(列表项组件)](https://guohjia.github.io/OOP-module/Tab组件/tab.html)
+[5.Tab(列表项组件)](https://guohjia.github.io/OOP-module/Tab/tab.html)
 
-[6.waterFull(瀑布流-新浪新闻)](https://guohjia.github.io/OOP-module/Tab组件/tab.html)
+[6.waterFull(瀑布流-新浪新闻)](https://guohjia.github.io/OOP-module/WaterFall/waterFallNews.html)
 
-[7.Barrel(木桶布局)](https://guohjia.github.io/OOP-module/Tab组件/tab.html)
+[7.Barrel(木桶布局)](https://guohjia.github.io/OOP-module/Barrel/Barrel.html)
 
 ### 8.Toast(提示)
 * 接口:提示信息+时间
@@ -36,11 +36,11 @@ fixed.init($('.navWrapper'))
 ```
 
 ### 10.backToTop(回到顶部)
-* 接口回到顶部的时间,出现位置
+* 接口:回到顶部的时间,出现位置
 * 示例:
 ```js
 gotop.init(300,500)
 ```
 
 ### 部分轮子整合页面示例(导航栏固定+回到顶部+提示+懒加载)
-[预览]()
+[预览](https://guohjia.github.io/OOP-module/Music/music.html)
