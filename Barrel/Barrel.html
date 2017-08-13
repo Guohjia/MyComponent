@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>barrel</title>
+    <style>
+        .img-preview {
+            /*border: 1px solid;*/
+            width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .img-row::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .img-box {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-preview">
+    </div>
+    <script src="jquery-3.2.0.min.js"></script>
+    <script>
+        function Barrel($content) {
+            // console.log(this.render)
+            this.$content = $content;
+            this.loadImg();
+            this.rowList = [];
+        }
+
+        Barrel.prototype = {
+            loadImg: function () {
+                var _this = this;
+                var imgUrls = this.getImgUrls(30)
+                $.each(imgUrls, function (idx, url) {
+                    var img = new Image();
+                    img.src = url;
+                    img.onload = function () {
+                        var imgInfo = {
+                            target: img,  
+                            height: 200,
+                            width: 200 * (img.width / img.height)
+
+                        };
+                        _this.render(imgInfo) //图片加载完成之后获取到这个图片对象
+                    }
+                })
+            },
+
+            render: function (imgInfo) {
+                var _this = this
+                var rowList = this.rowList
+                var clientWidth = this.$content.width();
+                var rowWidth = 0;
+                var newRowHeight = 0;
+                var lastImgInfo = imgInfo;
+                this.rowList.push(imgInfo);
+
+                for (var i = 0; i < this.rowList.length; i++) {
+                    rowWidth = rowWidth + this.rowList[i].width;
+                    if (rowWidth > clientWidth) {
+                        this.rowList.pop();
+                        rowWidth = rowWidth - imgInfo.width;
+                        newRowHeight = clientWidth * 200 / rowWidth;
+                        this.layout(newRowHeight);
+                        this.rowList = [];
+                        this.rowList.push(imgInfo);//一个新的开始，将最后一张放不下的图片重新放到新的一行里面；
+
+                    }
+                }
+            },
+            layout: function (newRowHeight) {
+                //将刚才不超过容器宽度的图片放置上去；
+                // console.log('creat now')
+                var $rowCt = $('<div class="img-row"></div>');
+                $.each(this.rowList, function (index, imgInfo) {
+                    var $imgCt = $('<div class="img-box"></div>')
+                    $img = $(imgInfo.target);
+                    $img.height(newRowHeight);
+                    $imgCt.append($img);
+                    $rowCt.append($imgCt);
+                })
+                this.$content.append($rowCt);
+            },
+
+            getImgUrls: function (num) {
+                var color, width, height, urls = [];
+                for (var i = 0; i < num; i++) {
+                    color = Math.random().toString(16).substring(2, 8);
+                    width = Math.floor(Math.random() * 100 + 50);
+                    height = Math.floor(Math.random() * 30 + 50);
+                    urls.push("http://placehold.it/" + width + "x" + height + "/" + color + "/fff");
+                }
+                return urls;
+            }
+        }
+        var barrel = new Barrel($('.img-preview'));
+    </script>
+</body>
+
+</html>

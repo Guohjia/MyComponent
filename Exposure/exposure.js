@@ -30,10 +30,10 @@ class Exposure {
     }
 
     isVisible($node) {
-        var windowHeight = $(window).height(),
-            scrollTop = $(window).scrollTop(),
-            offsetTop = $node.offset().top,
-            nodeHeight = $node.height();
+        var windowHeight = $(window).height(),  //窗口高度
+            scrollTop = $(window).scrollTop(),  //滚动距离
+            offsetTop = $node.offset().top,  //结点距离顶部高度
+            nodeHeight = $node.height();  //结点自身高度
         if (scrollTop + windowHeight > offsetTop && scrollTop < offsetTop + nodeHeight) {   //结点滚入页面&&结点滚入页面之后没有滚出去
             return true;
         } else {
@@ -42,3 +42,11 @@ class Exposure {
     }
 
 }
+
+load = (function () {
+        return {
+            init: function ($content) {
+                new Exposure($content)
+            }
+        }
+})()

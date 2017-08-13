@@ -1,8 +1,8 @@
 class Dialog {
-    constructor() {
-        let defaultoptions = {
-            title: '',
-            content: '',
+    constructor(title,content) {
+        this.defaultoptions = {
+            title: title,
+            content: content,
         }
         this.creatDialog();
         this.bindEvents();
@@ -28,13 +28,13 @@ class Dialog {
     setOptions(options) {
         if (typeof options === 'string') {
             this.options = $.extend({}, this.defaultoptions, { content: options });
-        } else if (typeof options === 'object') {
+        } else {
             this.options = $.extend({}, this.defaultoptions, options);
         }
         this.setDialog();
     }
 
-    setDialog() {   
+    setDialog() {
         if (!this.options.title) {
             this.dialog.find('.header').hide();
         } else {
@@ -71,7 +71,7 @@ class Dialog {
 
         })
         $('.open3').on('click', function () {
-                _this.setOptions({ title: 'Your Choose', content: choose })
+                _this.setOptions()
 
         })
         $('.open4').on('click', function () {
@@ -96,5 +96,13 @@ class Dialog {
         })
     }
 }
+
+dialog=(function(){
+    return {
+        init:function(title,content){
+            new Dialog(title,content);
+        }
+    }
+})()
 
 

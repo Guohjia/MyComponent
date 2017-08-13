@@ -4,8 +4,8 @@ class Tab {
         this.init().bind()
     }
     init() {
-        var tab = this.wrap.querySelector('.tab')
-        var tabLi = this.wrap.querySelectorAll('.tab li')
+        var tab = this.wrap.querySelector('.tab')  //选项列表class
+        var tabLi = this.wrap.querySelectorAll('.tab li') //
         var contentLi = this.wrap.querySelectorAll('.content li')
         this.tab=tab;
         this.tabLi=tabLi;

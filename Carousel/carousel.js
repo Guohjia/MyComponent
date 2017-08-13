@@ -112,3 +112,6 @@ class Carousel {
                 // this.clock=setInterval(_this.PlayNext, 2000)  //报错,此时this是window对象
             }
         }
+
+
+        
