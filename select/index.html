@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select</title>
+    <style>
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .inputContent {
+            border: 1px solid #ccc;
+            max-width: 171px;
+            display: none;
+        }
+
+        .inputContent li {
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .inputContent li:hover {
+            background: #BFDDF5;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" class="select">
+    <ul class="inputContent">
+    </ul>
+    <script>
+        var selectInput = document.querySelector('.select')
+        var selectContent = document.querySelector('.inputContent')
+        var data = ['a', 'ad', 'asd', 'aaa', 'babb', 'bvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'cccc', 'ad', 'asd', 'qwea', 'kasd', 'bzv', 'pnoim'];
+        var frag = document.createDocumentFragment();
+        data.map(function (item, index, array) {
+            var li = document.createElement('li')
+            li.innerText = item;
+            frag.appendChild(li)
+        })
+        selectContent.appendChild(frag)
+
+        //输入判断
+        selectInput.addEventListener('input', function (e) {
+            e.target.value ? selectContent.style.display = 'block' : selectContent.style.display = 'none'
+            var selectContentLis = document.querySelectorAll('.inputContent li')
+            //1.首字母依次匹配不行?
+            //2.每次只插入符合的DOM结点? =>遍历数组,值相等的匹配项目插入dom结点;
+            // data.map(function (item, index, array) {  =>需要一个对象字面量标志一下是否已经存在,如果存在就不重复插入了,不存在就插入
+            //     if (item.match(e.target.value)) {
+            //         var li = document.createElement('li')
+            //         li.innerText = item;
+            //         frag.appendChild(li)
+            //     }
+            // })
+            // selectContent.appendChild(frag)
+            for (var i = 0; i < selectContentLis.length; i++) {
+                if (!selectContentLis[i].innerText.match(e.target.value)) {
+                    selectContentLis[i].style.display = 'none'
+                } else {
+                    selectContentLis[i].style.display = 'block'
+                }
+            }
+        })
+
+        //点击li赋予value
+        selectContent.addEventListener('click', function (e) {
+            if (e.target.tagName.toLowerCase() === 'li') {
+                selectInput.value = e.target.innerText;
+                selectContent.style.display = 'none'
+            }
+        })
+    </script>
+</body>
+
+</html>
