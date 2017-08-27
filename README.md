@@ -39,7 +39,7 @@ fixed.init($('.navWrapper'))
 ```js
 gotop.init(300,500)
 ```
-### 10.backToTop(选择下拉框)
+### 10.select(选择下拉框)
 [10.select(选择下拉框)](https://guohjia.github.io/OOP-module/select/index.html)
 
 ### 部分轮子整合页面示例(导航栏固定+回到顶部+提示+懒加载)
