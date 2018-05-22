@@ -1,5 +1,4 @@
-# OOP-module
-**以面向对象的方式封装一些简单的组件**
+# MyComponent
 
  [所有源码](https://github.com/Guohjia/OOP-module)
 
